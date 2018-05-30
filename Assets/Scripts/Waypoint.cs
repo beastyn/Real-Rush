@@ -9,21 +9,12 @@ public class Waypoint: MonoBehaviour {
 
     public bool isExplored = false;
     public Waypoint exploredFrom;
-
-    public bool isStartPoint = false;
-    public bool isEndPoint = false;
+    public bool isPlaceable = true;
 
     Vector2Int onGridPos;
     const int gridSize = 10;
-    [SerializeField] Color exploredColor;
-
-    // Use this for initialization
-    void Start ()
-    {
-        
-		
-	}
-
+    
+  
     public int GetGridSize()
     {
         return gridSize;
@@ -37,17 +28,18 @@ public class Waypoint: MonoBehaviour {
         );
     }
 
-    public void SetTopColor(Color color)
-    {
-        MeshRenderer topMeshRend = transform.Find("top").GetComponent<MeshRenderer>();
-        topMeshRend.material.color = color;
-    }
+  
     // Update is called once per frame
     void Update ()
     {
-        if (isExplored && !isStartPoint && !isEndPoint)
-        {
-            SetTopColor(exploredColor);
-        }
+      
 	}
+
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0) && isPlaceable)
+        {
+            print("Mouse over" + gameObject.name);
+        }
+    }
 }

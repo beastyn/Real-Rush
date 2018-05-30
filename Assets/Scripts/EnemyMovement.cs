@@ -10,23 +10,22 @@ public class EnemyMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        
-      //  StartCoroutine(PrintAllWaypoints());
-     //   print("See you!");
+        Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+        var path = pathfinder.GetPath();
+        StartCoroutine(FollowPath(path));
+       
     }
 
-    /*IEnumerator PrintAllWaypoints()
+    IEnumerator FollowPath(List<Waypoint> path)
     {
-        print("Start!");
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-
-            print(waypoint.name);
+              
             yield return new WaitForSeconds(1f);
         }
-        print("Finish");
-    } */
+       
+    } 
 
     // Update is called once per frame
     void Update()
