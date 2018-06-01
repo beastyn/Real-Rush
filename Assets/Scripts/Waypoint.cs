@@ -11,10 +11,13 @@ public class Waypoint: MonoBehaviour {
     public Waypoint exploredFrom;
     public bool isPlaceable = true;
 
+    [SerializeField] Tower towerPrefab;
+    [SerializeField] Transform parentForTowers;
+
     Vector2Int onGridPos;
     const int gridSize = 10;
     
-  
+   
     public int GetGridSize()
     {
         return gridSize;
@@ -39,7 +42,9 @@ public class Waypoint: MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-            print("Mouse over" + gameObject.name);
+            Tower placedTower = Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            placedTower.transform.parent = parentForTowers;
+            isPlaceable = false;
         }
     }
 }
