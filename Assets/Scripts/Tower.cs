@@ -10,6 +10,7 @@ public class Tower : MonoBehaviour {
 
     Transform targetEnemy;
 
+    public Waypoint baseWaypoint;
 
     // Use this for initialization
     void Start () {
@@ -57,10 +58,12 @@ public class Tower : MonoBehaviour {
 
     void ProcessFiring()
     {
+        
         float distanceToEnemy = Vector3.Distance(targetEnemy.position, transform.position);
         if (distanceToEnemy <= fireRange)
         {
-            objectToPan.LookAt(targetEnemy);
+            objectToPan.LookAt(targetEnemy.Find("Body"));
+          
             Shoot(true);
         }
         else

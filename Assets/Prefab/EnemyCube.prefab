@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114915866355676586}
   - component: {fileID: 114235707740317590}
   - component: {fileID: 65178916848288798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4157188321222260}
   - component: {fileID: 23956396849167370}
   - component: {fileID: 102357087575916248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4501081425245848}
   - component: {fileID: 33927557229479720}
   - component: {fileID: 23661006963950812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Block_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 33780902855594860}
   - component: {fileID: 23173679047050078}
   - component: {fileID: 64360027103200428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378128987604496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40, y: 0, z: 40}
+  m_LocalPosition: {x: -30, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4995430784356246}
@@ -288,7 +288,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1805815156269154}
-  m_Text: -4.4
+  m_Text: -3.1
   m_OffsetZ: 0
   m_CharacterSize: 30
   m_LineSpacing: 1
@@ -316,9 +316,6 @@ MonoBehaviour:
   isExplored: 0
   exploredFrom: {fileID: 0}
   isPlaceable: 1
-  towerPrefab: {fileID: 114774293170774960, guid: a3571b7f05ffe4342b2825dfe96ea0f4,
-    type: 2}
-  parentForTowers: {fileID: 0}
 --- !u!114 &114915866355676586
 MonoBehaviour:
   m_ObjectHideFlags: 1
