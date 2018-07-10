@@ -498,13 +498,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a3ce190bffe954997194220cef4da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 2
+  hitPoints: 10
   hitEffect: {fileID: 198183480973990266}
   dieEffect: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 2}
   hitSFX: {fileID: 8300000, guid: c693caa25ef30164cae04877c0923cb6, type: 3}
   deathSFX: {fileID: 8300000, guid: 4aaaf9cf8d4ce2c41ae7a93b599f4bcb, type: 3}
-  camera: {fileID: 0}
 --- !u!114 &114750406755508802
 MonoBehaviour:
   m_ObjectHideFlags: 1
